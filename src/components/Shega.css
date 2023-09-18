@@ -1,0 +1,68 @@
+.shega-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .shega-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #d7d7d7;
+    width: 900px;
+  }
+  
+  .shega {
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+    min-width: 300px;
+  }
+  
+  .shega h2 {
+    font-size: 16px;
+    width: 150px;
+  }
+  
+  .shega img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .shega-symbol {
+    text-transform: uppercase;
+  }
+  
+  .shega-data {
+    display: flex;
+    text-align: right;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .shega-price {
+    width: 110px;
+  }
+  
+  .shega-volume {
+    width: 155px;
+  }
+  
+  .shega-marketcap {
+    width: 230px;
+  }
+  
+  .shega-percent {
+    width: 100px;
+  }
+  
+  .red {
+    color: #f00606;
+  }
+  
+  .green {
+    color: #1146d8;
+  }
+  
