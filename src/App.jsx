@@ -5,6 +5,7 @@ import Shega from "./components/Shega";
 import Chart from "chart.js/auto";
 import img from "./assets/2.png";
 
+
 function App() {
   const [shegas, setShegas] = useState([]);
   const [search, setSearch] = useState("");
