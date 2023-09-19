@@ -57,7 +57,9 @@ function App() {
 
   const convertToETB = (convertedPrice) => {
     const outp = convertedPrice * exchangeRates.ETB
-    return outp.toFixed(2)
+    const formatted = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'ETB' }).format(outp)
+    return formatted.slice(0, -3)
+    // return outp.toFixed(2)
   }
 
 
