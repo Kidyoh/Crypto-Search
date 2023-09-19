@@ -41,7 +41,7 @@ const Shega = ({
           )}
 
           <p className="shega-marketcap">
-            Mkt Cap: ${marketcap.toLocaleString()}
+            ${marketcap.toLocaleString()}
           </p>
          <p>{isOpen ? "Hide Chart" : "Show Chart"}</p>
         </div>

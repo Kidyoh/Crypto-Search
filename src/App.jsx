@@ -83,11 +83,21 @@ function App() {
           <img src={img} className="pl-80 object-scale-down h-54" />
         </div>
       </div>
+      <div className="flex grid-cols-5 p-2 space-x-24">
+      <div className="header-item">Name</div>
+      <div className="header-item">Symbol</div>
+      <div className="header-item">Price</div>
+      <div className="header-item">Volume</div>
+      <div className="header-item">Price Change </div>
+      <div className="header-item">Market Cap </div>
+    </div>
       {filterShegas.map((shega) => (
         <div key={shega.id} onClick={() => {
           setSelectedCrypto(shega);
           toggleChart();
         }}>
+         
+
           
           <Shega
             name={shega.name}
