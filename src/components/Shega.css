@@ -10,7 +10,7 @@
     align-items: center;
     height: 80px;
     border-bottom: 1px solid #d7d7d7;
-    width: 900px;
+    width: 1050px;
   }
   
   .shega {
@@ -43,7 +43,14 @@
   }
   
   .shega-price {
-    width: 90px;
+    width: 70px;
+    margin-right: 60px;
+  
+   
+  }
+  .shega-priceChange {
+    width: 95px;
+    margin-left: 20px;
   }
   
   .shega-volume {

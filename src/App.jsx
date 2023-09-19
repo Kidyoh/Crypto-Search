@@ -4,6 +4,7 @@ import "./App.css";
 import Shega from "./components/Shega";
 import Chart from "chart.js/auto";
 import img from "./assets/2.png";
+import Axios from 'axios';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
   const [showChart, setShowChart] = useState(false);
   const chartRef = useRef(null);
   const [curOpen, setCurOpen] = useState(null);
+  const [exchangeRates, setExchangeRates] = useState({});
   
 
   useEffect(() => {
@@ -39,6 +41,24 @@ function App() {
   const toggleChart = () => {
     setShowChart(!showChart);
   };
+
+
+  useEffect(() => {
+    Axios.get(
+      `src/data/exchange_rates.json`)
+      .then(res => {
+        setExchangeRates(res.data.rates) 
+      })
+      .catch(err => {
+        console.error(err)
+      })
+  }, []);
+
+
+  const convertToETB = (convertedPrice) => {
+    return convertedPrice * exchangeRates.ETB
+  }
+
 
   useEffect(() => {
     if (selectedCrypto && chartRef.current) {
@@ -87,6 +107,7 @@ function App() {
       <div className="header-item">Name</div>
       <div className="header-item">Symbol</div>
       <div className="header-item">Price</div>
+      <div className="header-item">Price in ETB</div>
       <div className="header-item">Volume</div>
       <div className="header-item">Price Change </div>
       <div className="header-item">Market Cap </div>
@@ -102,6 +123,7 @@ function App() {
           <Shega
             name={shega.name}
             price={shega.current_price}
+            convertedPrice={convertToETB(shega.current_price)}
             symbol={shega.symbol}
             marketcap={shega.total_volume}
             volume={shega.market_cap}

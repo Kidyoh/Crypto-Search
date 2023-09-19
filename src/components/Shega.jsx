@@ -6,6 +6,7 @@ import "./Shega.css";
 const Shega = ({
   name,
   price,
+  convertedPrice,
   symbol,
   marketcap,
   volume,
@@ -32,6 +33,8 @@ const Shega = ({
         </div>
         <div className="shega-data">
           <p className="shega-price">${price}</p>
+          
+          <p className="shega-priceChange">${convertedPrice}</p>
           <p className="shega-volume">${volume.toLocaleString()}</p>
 
           {priceChange < 0 ? (
