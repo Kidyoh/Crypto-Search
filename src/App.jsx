@@ -56,7 +56,8 @@ function App() {
 
 
   const convertToETB = (convertedPrice) => {
-    return convertedPrice * exchangeRates.ETB
+    const outp = convertedPrice * exchangeRates.ETB
+    return outp.toFixed(2)
   }
 
 
